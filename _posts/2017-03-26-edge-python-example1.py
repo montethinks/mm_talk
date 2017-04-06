@@ -1,10 +1,11 @@
+
 '''
 Below shows a simple example how using a directed acyclic graph (DAG) can help with maintaining order
 of execution steps, and also by tracking what all is needing to be calculated from the root
 to display of a given function. This is most useful when you might have many iterative
 computations before receiving a final output
 '''
-
+'''
 import pickle
 
 executionResults = {}
@@ -12,9 +13,9 @@ states = []
 
 
 def DAGFunction(f):
-  '''
+  
   Decorator that allows an execution of a given function to be tracked with various metrics
-  '''
+  
   global states
   def trace(*args, **kwargs):
     result = f(*args, **kwargs)
@@ -23,9 +24,10 @@ def DAGFunction(f):
     return result, states, executionResults
   return trace
 
-'''
+
+
 Create three random functions where the 2nd and 3rd have connections
-'''
+
 
 @DAGFunction
 def Test1(a):
@@ -39,6 +41,7 @@ def Test2(a):
 def Test3(a):
   return Test2(a)[0] + 3
 
+'''
 '''
 Example evaluation of Test3(10):
 
