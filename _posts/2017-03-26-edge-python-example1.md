@@ -1,3 +1,7 @@
+---
+layout: post
+title: "Edge Python Example"
+---
 
 Below shows a simple example how using a directed acyclic graph (DAG) can help with maintaining order
 of execution steps, and also by tracking what all is needing to be calculated from the root

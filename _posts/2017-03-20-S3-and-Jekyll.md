@@ -2,8 +2,9 @@
 layout: post 
 title:  "Serving Jekyll static site on AWS S3"
 ---
+I'm writing a quick reference for setting up AWS S3 bucket to host static. Jekyll is being used to build the site. This will be a multi-part series that will eventually cover using Route 53 DNS Resoultion for adding a custom domain and a CloudFront content delivery network. 
 
-This is a reference for setting up AWS S3 bucket to host static. Jekyll is being used to build the site. This will be a multi-part series that will eventually cover using Route 53 DNS Resoultion for adding a custom domain and a CloudFront content delivery network.
+_Note: The contents of this post are a work in progress._
 
 First steps to hosting a static website using AWS S3:
 
@@ -36,4 +37,4 @@ Add permissions and configure main bucket with domain name (example.com)
 
 ONLY ADD THE CONTENTS OF THE ```_site``` DIRECTORY, OTHERWISE THE INDEX.HTML FILE IS NOT VISIBLE AS THE ROOT.
 
-(Need to add final steps and clarify first steps.)
+Test your website by visiting the specified test domain.
